@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "{{context}}/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  	<link rel="stylesheet" type="text/css" media="print" href="{{context}}/report.css"></link>  
+ 	 
+</head>
+ <body>
+
+	<div class="header">
+       List of available products.<br/>
+       Acme Eletronics Company
+    </div>
+
+    <div class="footer" >
+        <p>Page <span id="pagenumber"></span> of <span id="pagecount"></span></p>
+    </div>
+	
+
+	<div class="content">
+		{{#if products}}
+			<h4>List of Products</h4>
+			<table class="gridtable">
+		    <thead>
+		      <tr>
+		        <th>Product</th>
+		        <th>Category</th>
+		        <th>Price</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		  	{{#products}}	
+			 	<tr>
+		    		<td>{{name}}</td>
+		    		<td>{{category}}</td>
+		    		<td>{{price}}</td>
+		  		</tr>
+		  {{/products}}
+		  </tbody>
+		  </table> 
+		{{/if}}
+	
+	</div> <!-- content -->		
+ </body>
+</html>
